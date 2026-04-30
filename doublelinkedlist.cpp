@@ -28,7 +28,48 @@ public:
       Node*newNode=New Node();
       
       //step2:ASSIGN volue to the data fields
-      newNode->noMhs=Nim
+      newNode->noMhs=Nim;
+
+       //step3:Insert at beginning if list is empty or nim is smallest
+    if (START == NULL || nim <= START->noMhs)
+    {   
+        if (START != NULL && nim == START->noMhs)
+        {
+            cout << "\nDuplicate number not allowed" << endl;
+            return;
+        }
+        //  Step 4: newNode.next = START
+        newNode->next = START;
+
+        // Step 5: START.prev = newNode (if START exists)
+        if (START != NULL)
+        START->prev = newNode;
+
+        // Step 6: newNode.prev = NULL
+        newNode->prev = NULL;
+
+        // Step 7: START = newNode
+        START = newNode;
+        return; 
+    }
+
+
+
+
+// Step 4: newNode.next = START
+newNode->next = START;
+
+// Step 5: START.prev = newNode (if START exists)
+if (START != NULL)
+{}
+START->prev = newNode;
+
+// Step 6: newNode.prev = NULL
+newNode->prev = NULL;
+
+// Step 7: START = newNode
+START = newNode;
+return; 
 
     }    
 }
